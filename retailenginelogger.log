@@ -1,0 +1,551 @@
+======process started at 2022-04-18 8:30:59
+Your hostname, localhost.localdomain resolves to a loopback address: 127.0.0.1; using 192.168.204.147 instead (on interface ens33)
+Set SPARK_LOCAL_IP if you need to bind to another address
+Running Spark version 2.4.7
+Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Submitted application: Retail-coreengine
+Changing view acls to: hduser
+Changing modify acls to: hduser
+Changing view acls groups to: 
+Changing modify acls groups to: 
+SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(hduser); groups with view permissions: Set(); users  with modify permissions: Set(hduser); groups with modify permissions: Set()
+Successfully started service 'sparkDriver' on port 36150.
+Registering MapOutputTracker
+Registering BlockManagerMaster
+Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+BlockManagerMasterEndpoint up
+Created local directory at /tmp/blockmgr-940e88ba-e4df-40a1-a005-b6e0999f75f6
+MemoryStore started with capacity 1202.4 MB
+Registering OutputCommitCoordinator
+Logging initialized @2246ms
+jetty-9.3.z-SNAPSHOT, build timestamp: unknown, git hash: unknown
+Started @2330ms
+Started ServerConnector@613a8ee1{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+Successfully started service 'SparkUI' on port 4040.
+Started o.s.j.s.ServletContextHandler@64ba3208{/jobs,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@13518f37{/jobs/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@7cbc3762{/jobs/job,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@49872d67{/jobs/job/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@56303b57{/stages,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@4b2a01d4{/stages/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@8692d67{/stages/stage,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@34f7234e{/stages/stage/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@753432a2{/stages/pool,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@23bff419{/stages/pool/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@4983159f{/storage,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@44e3a2b2{/storage/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@101639ae{/storage/rdd,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@4c550889{/storage/rdd/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@1d2bd371{/environment,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@44040454{/environment/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@65fe9e33{/executors,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@18bc345{/executors/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@42f8285e{/executors/threadDump,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@26bab2f1{/executors/threadDump/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@3724af13{/static,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@293a5f75{/,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@fcb4004{/api,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@784c3487{/jobs/job/kill,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@53142455{/stages/stage/kill,null,AVAILABLE,@Spark}
+Bound SparkUI to 0.0.0.0, and started at http://192.168.204.147:4040
+Starting executor ID driver on host localhost
+Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 41003.
+Server created on 192.168.204.147:41003
+Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+Registering BlockManager BlockManagerId(driver, 192.168.204.147, 41003, None)
+Registering block manager 192.168.204.147:41003 with 1202.4 MB RAM, BlockManagerId(driver, 192.168.204.147, 41003, None)
+Registered BlockManager BlockManagerId(driver, 192.168.204.147, 41003, None)
+Initialized BlockManager: BlockManagerId(driver, 192.168.204.147, 41003, None)
+Sink class org.apache.spark.metrics.sink.MetricsServlet cannot be instantiated
+Error initializing SparkContext.
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.apache.spark.metrics.MetricsSystem$$anonfun$registerSinks$1.apply(MetricsSystem.scala:202)
+	at org.apache.spark.metrics.MetricsSystem$$anonfun$registerSinks$1.apply(MetricsSystem.scala:196)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashTable$class.foreachEntry(HashTable.scala:236)
+	at scala.collection.mutable.HashMap.foreachEntry(HashMap.scala:40)
+	at scala.collection.mutable.HashMap.foreach(HashMap.scala:130)
+	at org.apache.spark.metrics.MetricsSystem.registerSinks(MetricsSystem.scala:196)
+	at org.apache.spark.metrics.MetricsSystem.start(MetricsSystem.scala:104)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:514)
+	at org.apache.spark.SparkContext$.getOrCreate(SparkContext.scala:2520)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$7.apply(SparkSession.scala:930)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$7.apply(SparkSession.scala:921)
+	at scala.Option.getOrElse(Option.scala:121)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:921)
+	at retail.driver.rundriver$.main(rundriver.scala:42)
+	at retail.driver.rundriver.main(rundriver.scala)
+Caused by: java.lang.NoClassDefFoundError: com/fasterxml/jackson/annotation/ObjectIdResolver
+	at com.fasterxml.jackson.databind.ObjectMapper.<init>(ObjectMapper.java:543)
+	at com.fasterxml.jackson.databind.ObjectMapper.<init>(ObjectMapper.java:448)
+	at org.apache.spark.metrics.sink.MetricsServlet.<init>(MetricsServlet.scala:48)
+	... 21 more
+Caused by: java.lang.ClassNotFoundException: com.fasterxml.jackson.annotation.ObjectIdResolver
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 24 more
+Stopped Spark@613a8ee1{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+Stopped Spark web UI at http://192.168.204.147:4040
+MapOutputTrackerMasterEndpoint stopped!
+MemoryStore cleared
+BlockManager stopped
+BlockManagerMaster stopped
+OutputCommitCoordinator stopped!
+Successfully stopped SparkContext
+Error Occured:null
+Shutdown hook called
+Deleting directory /tmp/spark-8dfe461f-6008-4a0d-ad5c-f8dc9c88c529
+======process started at 2022-04-18 8:31:11
+Your hostname, localhost.localdomain resolves to a loopback address: 127.0.0.1; using 192.168.204.147 instead (on interface ens33)
+Set SPARK_LOCAL_IP if you need to bind to another address
+Running Spark version 2.4.7
+Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Submitted application: Retail-coreengine
+Changing view acls to: hduser
+Changing modify acls to: hduser
+Changing view acls groups to: 
+Changing modify acls groups to: 
+SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(hduser); groups with view permissions: Set(); users  with modify permissions: Set(hduser); groups with modify permissions: Set()
+Successfully started service 'sparkDriver' on port 39391.
+Registering MapOutputTracker
+Registering BlockManagerMaster
+Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+BlockManagerMasterEndpoint up
+Created local directory at /tmp/blockmgr-8f4e41ce-3d7d-48e8-99a1-27379a46db14
+MemoryStore started with capacity 1202.4 MB
+Registering OutputCommitCoordinator
+Logging initialized @2140ms
+jetty-9.3.z-SNAPSHOT, build timestamp: unknown, git hash: unknown
+Started @2221ms
+Started ServerConnector@3edd6c9c{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+Successfully started service 'SparkUI' on port 4040.
+Started o.s.j.s.ServletContextHandler@23fb172e{/jobs,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@3a393455{/jobs/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@13518f37{/jobs/job,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@3a6f2de3{/jobs/job/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@49872d67{/stages,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@56303b57{/stages/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@4b2a01d4{/stages/stage,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@2f48b3d2{/stages/stage/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@34f7234e{/stages/pool,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@753432a2{/stages/pool/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@23bff419{/storage,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@4983159f{/storage/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@44e3a2b2{/storage/rdd,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@101639ae{/storage/rdd/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@4c550889{/environment,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@1d2bd371{/environment/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@44040454{/executors,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@65fe9e33{/executors/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@18bc345{/executors/threadDump,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@42f8285e{/executors/threadDump/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@26bab2f1{/static,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@60957c0f{/,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@293a5f75{/api,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@2dd29a59{/jobs/job/kill,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@784c3487{/stages/stage/kill,null,AVAILABLE,@Spark}
+Bound SparkUI to 0.0.0.0, and started at http://192.168.204.147:4040
+Starting executor ID driver on host localhost
+Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 45605.
+Server created on 192.168.204.147:45605
+Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+Registering BlockManager BlockManagerId(driver, 192.168.204.147, 45605, None)
+Registering block manager 192.168.204.147:45605 with 1202.4 MB RAM, BlockManagerId(driver, 192.168.204.147, 45605, None)
+Registered BlockManager BlockManagerId(driver, 192.168.204.147, 45605, None)
+Initialized BlockManager: BlockManagerId(driver, 192.168.204.147, 45605, None)
+Sink class org.apache.spark.metrics.sink.MetricsServlet cannot be instantiated
+Error initializing SparkContext.
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.apache.spark.metrics.MetricsSystem$$anonfun$registerSinks$1.apply(MetricsSystem.scala:202)
+	at org.apache.spark.metrics.MetricsSystem$$anonfun$registerSinks$1.apply(MetricsSystem.scala:196)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashTable$class.foreachEntry(HashTable.scala:236)
+	at scala.collection.mutable.HashMap.foreachEntry(HashMap.scala:40)
+	at scala.collection.mutable.HashMap.foreach(HashMap.scala:130)
+	at org.apache.spark.metrics.MetricsSystem.registerSinks(MetricsSystem.scala:196)
+	at org.apache.spark.metrics.MetricsSystem.start(MetricsSystem.scala:104)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:514)
+	at org.apache.spark.SparkContext$.getOrCreate(SparkContext.scala:2520)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$7.apply(SparkSession.scala:930)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$7.apply(SparkSession.scala:921)
+	at scala.Option.getOrElse(Option.scala:121)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:921)
+	at retail.driver.rundriver$.main(rundriver.scala:42)
+	at retail.driver.rundriver.main(rundriver.scala)
+Caused by: java.lang.NoClassDefFoundError: com/fasterxml/jackson/annotation/ObjectIdResolver
+	at com.fasterxml.jackson.databind.ObjectMapper.<init>(ObjectMapper.java:543)
+	at com.fasterxml.jackson.databind.ObjectMapper.<init>(ObjectMapper.java:448)
+	at org.apache.spark.metrics.sink.MetricsServlet.<init>(MetricsServlet.scala:48)
+	... 21 more
+Caused by: java.lang.ClassNotFoundException: com.fasterxml.jackson.annotation.ObjectIdResolver
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 24 more
+Stopped Spark@3edd6c9c{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+Stopped Spark web UI at http://192.168.204.147:4040
+MapOutputTrackerMasterEndpoint stopped!
+MemoryStore cleared
+BlockManager stopped
+BlockManagerMaster stopped
+OutputCommitCoordinator stopped!
+Successfully stopped SparkContext
+Error Occured:null
+Shutdown hook called
+Deleting directory /tmp/spark-41cf2f1f-0fb8-4050-8de5-af8a6654617b
+======process started at 2022-04-18 7:24:38
+Your hostname, localhost.localdomain resolves to a loopback address: 127.0.0.1; using 192.168.204.147 instead (on interface ens33)
+Set SPARK_LOCAL_IP if you need to bind to another address
+Running Spark version 2.4.7
+Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Submitted application: Retail-coreengine
+Changing view acls to: hduser
+Changing modify acls to: hduser
+Changing view acls groups to: 
+Changing modify acls groups to: 
+SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(hduser); groups with view permissions: Set(); users  with modify permissions: Set(hduser); groups with modify permissions: Set()
+Successfully started service 'sparkDriver' on port 34279.
+Registering MapOutputTracker
+Registering BlockManagerMaster
+Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+BlockManagerMasterEndpoint up
+Created local directory at /tmp/blockmgr-e60f9b67-3225-4df6-abbb-704b7c17447a
+MemoryStore started with capacity 1202.4 MB
+Registering OutputCommitCoordinator
+Logging initialized @23610ms
+jetty-9.3.z-SNAPSHOT, build timestamp: unknown, git hash: unknown
+Started @24060ms
+Started ServerConnector@613a8ee1{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+Successfully started service 'SparkUI' on port 4040.
+Started o.s.j.s.ServletContextHandler@64ba3208{/jobs,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@13518f37{/jobs/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@7cbc3762{/jobs/job,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@49872d67{/jobs/job/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@56303b57{/stages,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@4b2a01d4{/stages/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@8692d67{/stages/stage,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@34f7234e{/stages/stage/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@753432a2{/stages/pool,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@23bff419{/stages/pool/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@4983159f{/storage,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@44e3a2b2{/storage/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@101639ae{/storage/rdd,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@4c550889{/storage/rdd/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@1d2bd371{/environment,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@44040454{/environment/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@65fe9e33{/executors,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@18bc345{/executors/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@42f8285e{/executors/threadDump,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@26bab2f1{/executors/threadDump/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@3724af13{/static,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@293a5f75{/,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@fcb4004{/api,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@784c3487{/jobs/job/kill,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@53142455{/stages/stage/kill,null,AVAILABLE,@Spark}
+Bound SparkUI to 0.0.0.0, and started at http://192.168.204.147:4040
+Starting executor ID driver on host localhost
+Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 46808.
+Server created on 192.168.204.147:46808
+Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+Registering BlockManager BlockManagerId(driver, 192.168.204.147, 46808, None)
+Registering block manager 192.168.204.147:46808 with 1202.4 MB RAM, BlockManagerId(driver, 192.168.204.147, 46808, None)
+Registered BlockManager BlockManagerId(driver, 192.168.204.147, 46808, None)
+Initialized BlockManager: BlockManagerId(driver, 192.168.204.147, 46808, None)
+Sink class org.apache.spark.metrics.sink.MetricsServlet cannot be instantiated
+Error initializing SparkContext.
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.apache.spark.metrics.MetricsSystem$$anonfun$registerSinks$1.apply(MetricsSystem.scala:202)
+	at org.apache.spark.metrics.MetricsSystem$$anonfun$registerSinks$1.apply(MetricsSystem.scala:196)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashTable$class.foreachEntry(HashTable.scala:236)
+	at scala.collection.mutable.HashMap.foreachEntry(HashMap.scala:40)
+	at scala.collection.mutable.HashMap.foreach(HashMap.scala:130)
+	at org.apache.spark.metrics.MetricsSystem.registerSinks(MetricsSystem.scala:196)
+	at org.apache.spark.metrics.MetricsSystem.start(MetricsSystem.scala:104)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:514)
+	at org.apache.spark.SparkContext$.getOrCreate(SparkContext.scala:2520)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$7.apply(SparkSession.scala:930)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$7.apply(SparkSession.scala:921)
+	at scala.Option.getOrElse(Option.scala:121)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:921)
+	at retail.driver.rundriver$.main(rundriver.scala:42)
+	at retail.driver.rundriver.main(rundriver.scala)
+Caused by: java.lang.NoClassDefFoundError: com/fasterxml/jackson/annotation/ObjectIdResolver
+	at com.fasterxml.jackson.databind.ObjectMapper.<init>(ObjectMapper.java:543)
+	at com.fasterxml.jackson.databind.ObjectMapper.<init>(ObjectMapper.java:448)
+	at org.apache.spark.metrics.sink.MetricsServlet.<init>(MetricsServlet.scala:48)
+	... 21 more
+Caused by: java.lang.ClassNotFoundException: com.fasterxml.jackson.annotation.ObjectIdResolver
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 24 more
+Stopped Spark@613a8ee1{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+Stopped Spark web UI at http://192.168.204.147:4040
+MapOutputTrackerMasterEndpoint stopped!
+MemoryStore cleared
+BlockManager stopped
+BlockManagerMaster stopped
+OutputCommitCoordinator stopped!
+Successfully stopped SparkContext
+Error Occured:null
+Shutdown hook called
+Deleting directory /tmp/spark-ac61bd23-8387-4d9b-8240-6aab23ba57b0
+======process started at 2022-04-18 7:27:2
+Your hostname, localhost.localdomain resolves to a loopback address: 127.0.0.1; using 192.168.204.147 instead (on interface ens33)
+Set SPARK_LOCAL_IP if you need to bind to another address
+Running Spark version 2.4.7
+Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Submitted application: Retail-coreengine
+Changing view acls to: hduser
+Changing modify acls to: hduser
+Changing view acls groups to: 
+Changing modify acls groups to: 
+SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(hduser); groups with view permissions: Set(); users  with modify permissions: Set(hduser); groups with modify permissions: Set()
+Successfully started service 'sparkDriver' on port 33811.
+Registering MapOutputTracker
+Registering BlockManagerMaster
+Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+BlockManagerMasterEndpoint up
+Created local directory at /tmp/blockmgr-68fe5fe0-3417-414b-bf13-ae6a5bc9ef4b
+MemoryStore started with capacity 1202.4 MB
+Registering OutputCommitCoordinator
+Logging initialized @3540ms
+jetty-9.3.z-SNAPSHOT, build timestamp: unknown, git hash: unknown
+Started @4399ms
+Started ServerConnector@613a8ee1{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+Successfully started service 'SparkUI' on port 4040.
+Started o.s.j.s.ServletContextHandler@64ba3208{/jobs,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@13518f37{/jobs/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@7cbc3762{/jobs/job,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@49872d67{/jobs/job/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@56303b57{/stages,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@4b2a01d4{/stages/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@8692d67{/stages/stage,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@34f7234e{/stages/stage/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@753432a2{/stages/pool,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@23bff419{/stages/pool/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@4983159f{/storage,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@44e3a2b2{/storage/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@101639ae{/storage/rdd,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@4c550889{/storage/rdd/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@1d2bd371{/environment,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@44040454{/environment/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@65fe9e33{/executors,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@18bc345{/executors/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@42f8285e{/executors/threadDump,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@26bab2f1{/executors/threadDump/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@3724af13{/static,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@293a5f75{/,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@fcb4004{/api,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@784c3487{/jobs/job/kill,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@53142455{/stages/stage/kill,null,AVAILABLE,@Spark}
+Bound SparkUI to 0.0.0.0, and started at http://192.168.204.147:4040
+Starting executor ID driver on host localhost
+Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 36745.
+Server created on 192.168.204.147:36745
+Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+Registering BlockManager BlockManagerId(driver, 192.168.204.147, 36745, None)
+Registering block manager 192.168.204.147:36745 with 1202.4 MB RAM, BlockManagerId(driver, 192.168.204.147, 36745, None)
+Registered BlockManager BlockManagerId(driver, 192.168.204.147, 36745, None)
+Initialized BlockManager: BlockManagerId(driver, 192.168.204.147, 36745, None)
+Sink class org.apache.spark.metrics.sink.MetricsServlet cannot be instantiated
+Error initializing SparkContext.
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.apache.spark.metrics.MetricsSystem$$anonfun$registerSinks$1.apply(MetricsSystem.scala:202)
+	at org.apache.spark.metrics.MetricsSystem$$anonfun$registerSinks$1.apply(MetricsSystem.scala:196)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashTable$class.foreachEntry(HashTable.scala:236)
+	at scala.collection.mutable.HashMap.foreachEntry(HashMap.scala:40)
+	at scala.collection.mutable.HashMap.foreach(HashMap.scala:130)
+	at org.apache.spark.metrics.MetricsSystem.registerSinks(MetricsSystem.scala:196)
+	at org.apache.spark.metrics.MetricsSystem.start(MetricsSystem.scala:104)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:514)
+	at org.apache.spark.SparkContext$.getOrCreate(SparkContext.scala:2520)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$7.apply(SparkSession.scala:930)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$7.apply(SparkSession.scala:921)
+	at scala.Option.getOrElse(Option.scala:121)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:921)
+	at retail.driver.rundriver$.main(rundriver.scala:42)
+	at retail.driver.rundriver.main(rundriver.scala)
+Caused by: java.lang.NoClassDefFoundError: com/fasterxml/jackson/annotation/ObjectIdResolver
+	at com.fasterxml.jackson.databind.ObjectMapper.<init>(ObjectMapper.java:543)
+	at com.fasterxml.jackson.databind.ObjectMapper.<init>(ObjectMapper.java:448)
+	at org.apache.spark.metrics.sink.MetricsServlet.<init>(MetricsServlet.scala:48)
+	... 21 more
+Caused by: java.lang.ClassNotFoundException: com.fasterxml.jackson.annotation.ObjectIdResolver
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 24 more
+Stopped Spark@613a8ee1{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+Stopped Spark web UI at http://192.168.204.147:4040
+MapOutputTrackerMasterEndpoint stopped!
+MemoryStore cleared
+BlockManager stopped
+BlockManagerMaster stopped
+OutputCommitCoordinator stopped!
+Successfully stopped SparkContext
+Error Occured:null
+Shutdown hook called
+Deleting directory /tmp/spark-690d202f-d6c2-4deb-83b7-2ab385462944
+======process started at 2022-04-18 7:31:53
+Your hostname, localhost.localdomain resolves to a loopback address: 127.0.0.1; using 192.168.204.147 instead (on interface ens33)
+Set SPARK_LOCAL_IP if you need to bind to another address
+Running Spark version 2.4.7
+Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Submitted application: Retail-coreengine
+Changing view acls to: hduser
+Changing modify acls to: hduser
+Changing view acls groups to: 
+Changing modify acls groups to: 
+SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(hduser); groups with view permissions: Set(); users  with modify permissions: Set(hduser); groups with modify permissions: Set()
+Successfully started service 'sparkDriver' on port 34257.
+Registering MapOutputTracker
+Registering BlockManagerMaster
+Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+BlockManagerMasterEndpoint up
+Created local directory at /tmp/blockmgr-868d0f04-85a2-49cd-82ac-1c937f741dfe
+MemoryStore started with capacity 1202.4 MB
+Registering OutputCommitCoordinator
+Logging initialized @3375ms
+jetty-9.3.z-SNAPSHOT, build timestamp: unknown, git hash: unknown
+Started @3447ms
+Started ServerConnector@613a8ee1{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+Successfully started service 'SparkUI' on port 4040.
+Started o.s.j.s.ServletContextHandler@64ba3208{/jobs,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@13518f37{/jobs/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@7cbc3762{/jobs/job,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@49872d67{/jobs/job/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@56303b57{/stages,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@4b2a01d4{/stages/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@8692d67{/stages/stage,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@34f7234e{/stages/stage/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@753432a2{/stages/pool,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@23bff419{/stages/pool/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@4983159f{/storage,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@44e3a2b2{/storage/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@101639ae{/storage/rdd,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@4c550889{/storage/rdd/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@1d2bd371{/environment,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@44040454{/environment/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@65fe9e33{/executors,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@18bc345{/executors/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@42f8285e{/executors/threadDump,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@26bab2f1{/executors/threadDump/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@3724af13{/static,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@293a5f75{/,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@fcb4004{/api,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@784c3487{/jobs/job/kill,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@53142455{/stages/stage/kill,null,AVAILABLE,@Spark}
+Bound SparkUI to 0.0.0.0, and started at http://192.168.204.147:4040
+Starting executor ID driver on host localhost
+Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 42040.
+Server created on 192.168.204.147:42040
+Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+Registering BlockManager BlockManagerId(driver, 192.168.204.147, 42040, None)
+Registering block manager 192.168.204.147:42040 with 1202.4 MB RAM, BlockManagerId(driver, 192.168.204.147, 42040, None)
+Registered BlockManager BlockManagerId(driver, 192.168.204.147, 42040, None)
+Initialized BlockManager: BlockManagerId(driver, 192.168.204.147, 42040, None)
+Started o.s.j.s.ServletContextHandler@64712be{/metrics/json,null,AVAILABLE,@Spark}
+======staging process started at 2022-04-18 7:32:28
+reading data from the file:s3a://inceptezspark/RetailData/Retail_Customers.csv
+written data into hive table:retail_stg.tblcustomer_stg
+reading data from the file:s3a://inceptezspark/RetailData/Retail_Product_Categories.csv
+written data into hive table:retail_stg.tblproductcategory_stg
+reading data from the file:s3a://inceptezspark/RetailData/Retail_Product_Subcategories.csv
+written data into hive table:retail_stg.tblproductsubcategory_stg
+reading data from the file:s3a://inceptezspark/RetailData/Retail_Sales*
+The directory s3a://inceptezspark/RetailData/Retail_Sales* was not found. Was it deleted very recently?
+written data into hive table:retail_stg.tblsales_stg
+reading data from the file:s3a://inceptezspark/RetailData/Retail_Territories.csv
+written data into hive table:retail_stg.tblterritory_stg
+reading data from the file:s3a://inceptezspark/RetailData/Retail_Products.csv
+written data into hive table:retail_stg.tblproduct_stg
+======staging process completed at 2022-04-18 7:34:45
+======process started at 2022-04-18 7:43:19
+Your hostname, localhost.localdomain resolves to a loopback address: 127.0.0.1; using 192.168.204.147 instead (on interface ens33)
+Set SPARK_LOCAL_IP if you need to bind to another address
+Running Spark version 2.4.7
+Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Submitted application: Retail-coreengine
+Changing view acls to: hduser
+Changing modify acls to: hduser
+Changing view acls groups to: 
+Changing modify acls groups to: 
+SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(hduser); groups with view permissions: Set(); users  with modify permissions: Set(hduser); groups with modify permissions: Set()
+Successfully started service 'sparkDriver' on port 36782.
+Registering MapOutputTracker
+Registering BlockManagerMaster
+Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+BlockManagerMasterEndpoint up
+Created local directory at /tmp/blockmgr-2ca89be4-df25-4dab-9691-683f3fc0017f
+MemoryStore started with capacity 1202.4 MB
+Registering OutputCommitCoordinator
+Logging initialized @2088ms
+jetty-9.3.z-SNAPSHOT, build timestamp: unknown, git hash: unknown
+Started @2172ms
+Started ServerConnector@613a8ee1{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+Successfully started service 'SparkUI' on port 4040.
+Started o.s.j.s.ServletContextHandler@64ba3208{/jobs,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@13518f37{/jobs/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@7cbc3762{/jobs/job,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@49872d67{/jobs/job/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@56303b57{/stages,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@4b2a01d4{/stages/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@8692d67{/stages/stage,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@34f7234e{/stages/stage/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@753432a2{/stages/pool,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@23bff419{/stages/pool/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@4983159f{/storage,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@44e3a2b2{/storage/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@101639ae{/storage/rdd,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@4c550889{/storage/rdd/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@1d2bd371{/environment,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@44040454{/environment/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@65fe9e33{/executors,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@18bc345{/executors/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@42f8285e{/executors/threadDump,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@26bab2f1{/executors/threadDump/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@3724af13{/static,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@293a5f75{/,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@fcb4004{/api,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@784c3487{/jobs/job/kill,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@53142455{/stages/stage/kill,null,AVAILABLE,@Spark}
+Bound SparkUI to 0.0.0.0, and started at http://192.168.204.147:4040
+Starting executor ID driver on host localhost
+Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 46294.
+Server created on 192.168.204.147:46294
+Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+Registering BlockManager BlockManagerId(driver, 192.168.204.147, 46294, None)
+Registering block manager 192.168.204.147:46294 with 1202.4 MB RAM, BlockManagerId(driver, 192.168.204.147, 46294, None)
+Registered BlockManager BlockManagerId(driver, 192.168.204.147, 46294, None)
+Initialized BlockManager: BlockManagerId(driver, 192.168.204.147, 46294, None)
+Started o.s.j.s.ServletContextHandler@64712be{/metrics/json,null,AVAILABLE,@Spark}
+======staging process started at 2022-04-18 7:43:29
+reading data from the file:s3a://inceptezspark/RetailData/Retail_Customers.csv
