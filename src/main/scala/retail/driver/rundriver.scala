@@ -34,8 +34,8 @@ object rundriver {
       logger.warn("======process started at " + format.format(starttime))
       
       val spark = SparkSession.builder()
-      .master("local")
-      .config("hive.metastore.uris","thrift://localhost:9083")
+      //.master("local")
+      .config("hive.metastore.uris",prop.getProperty("thrifturl"))
       .appName("Retail-coreengine")
       .config("spark.sql.debug.maxToStringFields", 1000)
       .enableHiveSupport()
